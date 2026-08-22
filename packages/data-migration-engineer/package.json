@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/data-migration-engineer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "FDE Lab - Data Migration Engineer POC",
   "main": "dist/index.js",
   "bin": {
