@@ -1,0 +1,18 @@
+{
+  "status": "valid",
+  "scenario": "normal",
+  "customer": "Acme SaaS",
+  "environment": "production",
+  "observations": [
+    "Configuration matches schema exactly."
+  ],
+  "issues": [],
+  "recommended_changes": [],
+  "risk": {
+    "level": "LOW",
+    "reason": "No changes proposed",
+    "requires_approval": false
+  },
+  "action_required": false,
+  "changes_applied": false
+}

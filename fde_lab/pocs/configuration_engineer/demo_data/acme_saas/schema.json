@@ -1,0 +1,64 @@
+{
+  "expected": {
+    "environment": "production",
+    "auth": {
+      "provider": "oauth",
+      "session_timeout_minutes": 60
+    },
+    "database": {
+      "pool_size": 20,
+      "ssl_required": true
+    },
+    "logging": {
+      "level": "INFO"
+    },
+    "features": {
+      "new_checkout": true,
+      "legacy_api": false
+    },
+    "api": {
+      "timeout_seconds": 30
+    }
+  },
+  "rules": {
+    "auth.provider": {
+      "required": true,
+      "type": "string",
+      "allowed": ["oauth", "saml"]
+    },
+    "auth.session_timeout_minutes": {
+      "required": true,
+      "type": "integer",
+      "min": 15,
+      "max": 480
+    },
+    "database.ssl_required": {
+      "required": true,
+      "type": "boolean",
+      "must_be_true_in_prod": true
+    },
+    "logging.level": {
+      "required": true,
+      "type": "string",
+      "allowed": ["DEBUG", "INFO", "WARN", "ERROR"]
+    },
+    "api.timeout_seconds": {
+      "required": true,
+      "type": "integer",
+      "min": 1,
+      "max": 300
+    },
+    "conflicts": [
+      {
+        "if": {"features.new_checkout": true},
+        "must_not_have": {"features.legacy_api": true},
+        "reason": "new_checkout is incompatible with legacy_api"
+      },
+      {
+        "if": {"environment": "production"},
+        "must_not_have": {"logging.level": "DEBUG"},
+        "reason": "DEBUG logging in production severely impacts performance"
+      }
+    ]
+  }
+}

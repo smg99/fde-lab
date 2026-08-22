@@ -1,0 +1,10 @@
+{
+  "project": "Subscription Checkout",
+  "requirements": [
+    "Introduce a new subscription checkout experience.",
+    "Must integrate with existing commerce platform.",
+    "Must use existing payment provider for billing.",
+    "Must sync subscribers to the customer CRM database.",
+    "Must record conversion events to the analytics system."
+  ]
+}

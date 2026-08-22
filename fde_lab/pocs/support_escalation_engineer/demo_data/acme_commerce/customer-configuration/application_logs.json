@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2023-10-25T14:05:13Z",
+    "level": "ERROR",
+    "component": "PaymentGateway",
+    "message": "Payment authorization failed: Stripe API key invalid. Please check your credentials.",
+    "request_id": "req_8812a"
+  }
+]

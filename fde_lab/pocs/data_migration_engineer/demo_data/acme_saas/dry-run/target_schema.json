@@ -1,0 +1,7 @@
+{
+  "fields": [
+    {"name": "customer_id", "type": "string", "required": true},
+    {"name": "full_name", "type": "string", "required": true},
+    {"name": "email_address", "type": "string", "required": true, "format": "email"}
+  ]
+}

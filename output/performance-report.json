@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "scenario": "normal",
+  "service": "checkout-api",
+  "diagnosis": {
+    "category": "healthy",
+    "confidence": "HIGH"
+  },
+  "metrics": {
+    "endpoint_p50_ms": 120,
+    "endpoint_p95_ms": 350,
+    "database_p95_ms": 45,
+    "external_api_p95_ms": 110,
+    "slowest_query_ms": 60,
+    "slowest_query_id": "Q12",
+    "request_rate_tps": 45,
+    "error_rate_percent": 0.1,
+    "cpu_utilization_percent": 45,
+    "memory_utilization_percent": 60,
+    "connection_pool_utilization_percent": 30
+  },
+  "evidence": [
+    "/checkout p95 is healthy at 350ms"
+  ],
+  "contradictory_evidence": [],
+  "impact": {
+    "latency": "Normal"
+  },
+  "recommendations": [
+    "No action required. Performance is within acceptable bounds."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "customer": {
+    "name": "Acme Health",
+    "contact": "admin@acmehealth.com"
+  },
+  "users": [
+    {
+      "email": "alice@acme.com",
+      "name": "Alice Smith",
+      "role": "admin"
+    },
+    {
+      "email": "bob@acme.com",
+      "name": "Bob Jones",
+      "role": "manager"
+    },
+    {
+      "email": "carol@acme.com",
+      "name": "Carol Lee",
+      "role": "viewer"
+    }
+  ],
+  "features": {
+    "analytics": true,
+    "exports": true,
+    "notifications": true
+  },
+  "integrations": {
+    "slack": {
+      "enabled": true,
+      "webhook_url": "https://example.com/webhook"
+    },
+    "webhook": {
+      "enabled": true,
+      "url": "https://api.acmehealth.com/webhook"
+    }
+  }
+}

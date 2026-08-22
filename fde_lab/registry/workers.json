@@ -29,6 +29,95 @@
         "deploy",
         "verify"
       ]
+    },
+    {
+      "name": "customer-onboarding-engineer",
+      "package": "@fde-lab/customer-onboarding-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "inspect_customer",
+        "validate_onboarding",
+        "map_requirements",
+        "generate_configuration",
+        "verify_onboarding"
+      ]
+    },
+    {
+      "name": "support-escalation-engineer",
+      "package": "@fde-lab/support-escalation-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "inspect_customer_issue",
+        "inspect_environment",
+        "investigate_evidence",
+        "attempt_reproduction",
+        "classify_issue",
+        "assess_severity",
+        "generate_escalation"
+      ]
+    },
+    {
+      "name": "data-migration-engineer",
+      "package": "@fde-lab/data-migration-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "inspect_schema",
+        "read_source_records",
+        "transform_record",
+        "validate_record",
+        "detect_duplicates",
+        "write_migration_output"
+      ]
+    },
+    {
+      "name": "api-integration-engineer",
+      "package": "@fde-lab/api-integration-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "read_api_spec",
+        "read_customer_config",
+        "validate_request",
+        "simulate_api_call",
+        "write_integration_artifacts"
+      ]
+    },
+    {
+      "name": "performance-engineer",
+      "package": "@fde-lab/performance-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "read_metrics",
+        "read_traces",
+        "correlate_bottleneck",
+        "write_performance_artifacts"
+      ]
+    },
+    {
+      "name": "configuration-engineer",
+      "package": "@fde-lab/configuration-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "read_customer_configuration",
+        "read_configuration_schema",
+        "validate_configuration",
+        "plan_configuration_changes",
+        "assess_change_risk",
+        "write_configuration_report"
+      ]
+    },
+    {
+      "name": "solution-engineer",
+      "package": "@fde-lab/solution-engineer",
+      "version": "0.1.0",
+      "capabilities": [
+        "read_requirements",
+        "read_environment",
+        "detect_conflicts",
+        "analyze_gaps",
+        "plan_architecture",
+        "plan_implementation",
+        "assess_risks"
+      ]
     }
   ]
 }

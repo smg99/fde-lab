@@ -1,0 +1,6 @@
+{
+  "platform": "Node.js 18.x",
+  "framework": "Express",
+  "database": "PostgreSQL 14",
+  "region": "us-east-1"
+}

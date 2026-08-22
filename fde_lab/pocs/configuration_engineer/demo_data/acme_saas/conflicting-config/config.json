@@ -1,0 +1,21 @@
+{
+  "environment": "production",
+  "auth": {
+    "provider": "oauth",
+    "session_timeout_minutes": 60
+  },
+  "database": {
+    "pool_size": 20,
+    "ssl_required": true
+  },
+  "logging": {
+    "level": "DEBUG"
+  },
+  "features": {
+    "new_checkout": true,
+    "legacy_api": true
+  },
+  "api": {
+    "timeout_seconds": 30
+  }
+}

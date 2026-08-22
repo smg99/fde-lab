@@ -1,0 +1,79 @@
+{
+  "customer": "Acme Commerce",
+  "api_name": "AcmePay API",
+  "discovery_status": "success",
+  "auth_status": "success",
+  "endpoint_status": "success",
+  "request_validation_status": "success",
+  "response_validation_status": "success",
+  "endpoints_analyzed": 2,
+  "integration_risks": [
+    "Bearer token required. Ensure secure storage.",
+    "429 rate limiting must be handled on /customers.",
+    "409 conflict response must be handled on /customers.",
+    "429 rate limiting must be handled on /customers/{id}."
+  ],
+  "recommended_approach": [
+    "Implement retry/backoff for 429.",
+    "Validate response schema before persistence.",
+    "Store API credentials outside source control.",
+    "Handle 409 as an idempotency conflict."
+  ],
+  "example": {
+    "authentication": {
+      "type": "bearer"
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer <TOKEN>"
+    },
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/customers",
+        "request_mapping": {
+          "type": "object",
+          "required": [
+            "email",
+            "name"
+          ],
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "response_mapping": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/customers/{id}",
+        "request_mapping": null,
+        "response_mapping": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

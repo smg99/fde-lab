@@ -1,0 +1,7 @@
+{
+  "infrastructure": [
+    "Web Application (React)",
+    "Commerce API (Node.js/Express)",
+    "Customer Database (PostgreSQL)"
+  ]
+}

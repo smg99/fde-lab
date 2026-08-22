@@ -1,0 +1,26 @@
+[
+  {
+    "source": "Customer Report",
+    "observation": "Issue reported by customer",
+    "relevance": "Direct context",
+    "confidence": "HIGH"
+  },
+  {
+    "source": "Application Logs",
+    "observation": "Failed to apply discount: TypeError: Cannot read properties of undefined (reading 'percentage')",
+    "relevance": "Identifies failure point",
+    "confidence": "HIGH"
+  },
+  {
+    "source": "Request Samples",
+    "observation": "Found request req_8812a",
+    "relevance": "Identifies inputs",
+    "confidence": "HIGH"
+  },
+  {
+    "source": "Recent Changes",
+    "observation": "Updated the discount service to support fixed amount discounts. May have changed the payload structure for percentage discounts.",
+    "relevance": "Potential root cause",
+    "confidence": "MEDIUM"
+  }
+]

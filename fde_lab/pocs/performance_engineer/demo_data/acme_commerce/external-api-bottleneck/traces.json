@@ -1,0 +1,8 @@
+{
+  "endpoint_p50_ms": 600,
+  "endpoint_p95_ms": 2200,
+  "database_p95_ms": 100,
+  "external_api_p95_ms": 1900,
+  "slowest_query_ms": 40,
+  "slowest_query_id": "Q12"
+}

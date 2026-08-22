@@ -1,0 +1,19 @@
+{
+  "environment": "production",
+  "auth": {
+    "session_timeout_minutes": 60
+  },
+  "database": {
+    "pool_size": 20
+  },
+  "logging": {
+    "level": "INFO"
+  },
+  "features": {
+    "new_checkout": true,
+    "legacy_api": false
+  },
+  "api": {
+    "timeout_seconds": 30
+  }
+}

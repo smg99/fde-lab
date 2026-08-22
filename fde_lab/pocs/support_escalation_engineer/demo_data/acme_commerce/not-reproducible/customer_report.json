@@ -1,0 +1,6 @@
+{
+  "customer": "Acme Commerce",
+  "contact": "support@acmecommerce.com",
+  "issue": "Customers are complaining about random checkout failures. We have no request IDs or specific timestamps, it just happens occasionally.",
+  "timestamp": "2023-10-25T14:30:00Z"
+}

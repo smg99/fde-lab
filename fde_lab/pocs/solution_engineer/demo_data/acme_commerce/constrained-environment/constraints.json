@@ -1,0 +1,4 @@
+{
+  "technical": ["cannot introduce a new database"],
+  "business": ["deployment window is restricted"]
+}

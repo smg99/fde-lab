@@ -1,0 +1,15 @@
+{
+  "source": "Legacy CRM",
+  "target": "New Customer Platform",
+  "records_inspected": 2,
+  "migrated_records": 2,
+  "rejected_records": 0,
+  "quarantined_records": 0,
+  "warnings": [],
+  "transformations": [
+    "Converted date 11/20/2022 to ISO8601",
+    "Converted date 05/15/2021 to ISO8601"
+  ],
+  "schema_conflicts": [],
+  "status": "completed"
+}

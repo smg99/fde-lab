@@ -1,0 +1,26 @@
+[
+  {
+    "source": "Customer Report",
+    "observation": "Issue reported by customer",
+    "relevance": "Direct context",
+    "confidence": "HIGH"
+  },
+  {
+    "source": "Application Logs",
+    "observation": "Database query failed: column 'discount_percentage' does not exist in table 'orders'",
+    "relevance": "Identifies failure point",
+    "confidence": "HIGH"
+  },
+  {
+    "source": "Request Samples",
+    "observation": "Found request req_8812a",
+    "relevance": "Identifies inputs",
+    "confidence": "HIGH"
+  },
+  {
+    "source": "Recent Changes",
+    "observation": "Drops old discount column but forgot to add the new one.",
+    "relevance": "Potential root cause",
+    "confidence": "MEDIUM"
+  }
+]

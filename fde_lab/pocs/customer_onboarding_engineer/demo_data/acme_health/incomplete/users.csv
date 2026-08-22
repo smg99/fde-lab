@@ -1,0 +1,6 @@
+email,name,role
+alice@acme.com,Alice Smith,admin
+bob@acme.com,Bob Jones,manager
+carol@acme.com,Carol Lee,viewer
+carol@acme.com,Carol Duplicate,viewer
+dave@acme.com,Dave Invalid,superadmin

@@ -1,0 +1,15 @@
+{
+  "customer": {
+    "name": "Acme Health",
+    "contact": "admin@acmehealth.com"
+  },
+  "features": {
+    "exports": true,
+    "notifications": true
+  },
+  "integrations": {
+    "slack": {
+      "enabled": true
+    }
+  }
+}

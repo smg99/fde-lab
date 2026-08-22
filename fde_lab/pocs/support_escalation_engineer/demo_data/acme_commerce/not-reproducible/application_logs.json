@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2023-10-25T14:00:00Z",
+    "level": "INFO",
+    "component": "CheckoutService",
+    "message": "Service started successfully",
+    "request_id": "N/A"
+  }
+]

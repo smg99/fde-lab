@@ -1,0 +1,6 @@
+{
+  "customer": "Acme Commerce",
+  "contact": "support@acmecommerce.com",
+  "issue": "Checkout occasionally fails when customers apply a discount code. We cannot consistently reproduce it, but customers are complaining about 500 errors on the checkout page.",
+  "timestamp": "2023-10-25T14:30:00Z"
+}

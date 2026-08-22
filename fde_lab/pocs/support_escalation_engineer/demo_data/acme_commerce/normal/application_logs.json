@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2023-10-25T14:05:12Z",
+    "level": "INFO",
+    "component": "CheckoutService",
+    "message": "Processing checkout for cart cart_9921",
+    "request_id": "req_8812a"
+  },
+  {
+    "timestamp": "2023-10-25T14:05:13Z",
+    "level": "ERROR",
+    "component": "CheckoutService",
+    "message": "Failed to apply discount: TypeError: Cannot read properties of undefined (reading 'percentage')",
+    "request_id": "req_8812a"
+  },
+  {
+    "timestamp": "2023-10-25T14:05:13Z",
+    "level": "ERROR",
+    "component": "CheckoutService",
+    "message": "HTTP 500 Internal Server Error returned to client",
+    "request_id": "req_8812a"
+  }
+]

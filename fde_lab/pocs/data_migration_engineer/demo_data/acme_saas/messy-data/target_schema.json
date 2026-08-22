@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {"name": "customer_id", "type": "string", "required": true},
+    {"name": "full_name", "type": "string", "required": true},
+    {"name": "email_address", "type": "string", "required": true, "format": "email"},
+    {"name": "phone_number", "type": "string", "required": false},
+    {"name": "organization_name", "type": "string", "required": false},
+    {"name": "country_code", "type": "string", "required": true},
+    {"name": "account_status", "type": "enum", "values": ["ACTIVE", "SUSPENDED", "CANCELLED"], "required": true},
+    {"name": "subscription_tier", "type": "enum", "values": ["BASIC", "PRO", "ENTERPRISE"], "required": true},
+    {"name": "marketing_consent", "type": "boolean", "required": true},
+    {"name": "registered_at", "type": "string", "required": true, "format": "date-iso8601"},
+    {"name": "address", "type": "string", "required": false}
+  ]
+}

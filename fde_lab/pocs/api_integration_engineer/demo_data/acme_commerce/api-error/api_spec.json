@@ -1,0 +1,55 @@
+{
+  "api_name": "AcmePay API",
+  "base_url": "https://api.acmepay.example.com/v1",
+  "authentication": {
+    "type": "bearer",
+    "header": "Authorization"
+  },
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/customers",
+      "request": {
+        "type": "object",
+        "required": ["email", "name"],
+        "properties": {
+          "email": {"type": "string"},
+          "name": {"type": "string"}
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "email": {"type": "string"}
+        }
+      },
+      "status_codes": {
+        "201": "Created",
+        "400": "Bad Request",
+        "401": "Unauthorized",
+        "409": "Conflict (Customer exists)",
+        "429": "Rate Limited"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/{id}",
+      "request": null,
+      "response": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "email": {"type": "string"}
+        }
+      },
+      "status_codes": {
+        "200": "OK",
+        "401": "Unauthorized",
+        "404": "Not Found",
+        "429": "Rate Limited",
+        "500": "Server Error"
+      }
+    }
+  ]
+}

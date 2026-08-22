@@ -9,11 +9,11 @@
   },
   "scripts": {
     "build": "tsc && npm run copy-python",
-    "copy-python": "mkdir -p dist/python && cp -r ../../fde_lab ../../demo ../../pyproject.toml dist/python/",
+    "copy-python": "mkdir -p dist/python && cp -r ../../fde_lab ../../demo ../../pyproject.toml dist/python/ && find dist/python -name '__pycache__' -type d -exec rm -rf {} +",
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fde-lab/cli-core": "0.1.4",
+    "@fde-lab/cli-core": "0.1.5",
     "chalk": "^4.1.2",
     "commander": "^11.0.0"
   },
@@ -23,5 +23,21 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smg99/fde-lab.git",
+    "directory": "packages/deployment-engineer"
+  },
+  "homepage": "https://github.com/smg99/fde-lab/tree/main/packages/deployment-engineer#readme",
+  "bugs": {
+    "url": "https://github.com/smg99/fde-lab/issues"
+  },
+  "keywords": [
+    "fde-lab",
+    "ai",
+    "worker",
+    "agent",
+    "deployment-engineer"
+  ]
 }

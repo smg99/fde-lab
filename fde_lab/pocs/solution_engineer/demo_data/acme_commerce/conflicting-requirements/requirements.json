@@ -1,0 +1,8 @@
+{
+  "project": "Subscription Checkout",
+  "requirements": [
+    "Checkout must be synchronous",
+    "Checkout must never wait for the billing system",
+    "Customer must see billing confirmation immediately"
+  ]
+}

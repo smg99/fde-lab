@@ -3,34 +3,55 @@
 import { checkEnvironment, setupAndRunPython } from '@fde-lab/cli-core';
 import chalk from 'chalk';
 import path from 'path';
+import { Command } from 'commander';
+
+const program = new Command();
+
+program
+  .name('fde-environment-inspector')
+  .description('FDE Lab - Environment Inspector')
+  .option('--json', 'Output machine-readable JSON')
+  .option('--manifest', 'Output capability manifest JSON')
+  .parse(process.argv);
+
+const options = program.opts();
 
 async function main() {
-  console.log(chalk.bold.blue('\nFDE Lab'));
-  console.log(chalk.blue('────────────────────────────────'));
-  console.log(chalk.bold('Environment Inspector\n'));
+  const machineMode = options.json || options.manifest;
 
   // 1. Check dependencies
-  const isEnvReady = await checkEnvironment();
+  const isEnvReady = await checkEnvironment(machineMode);
   if (!isEnvReady) {
     process.exit(1);
   }
 
   // 2. Resolve package root
-  // The structure is dist/cli.js, so the root is __dirname/..
   const packageRoot = path.join(__dirname, '..');
 
   // 3. Setup and Run Python
-  // The module we want to run is fde_lab.cli.main
-  await setupAndRunPython(packageRoot, 'fde_lab.cli.main', ['demo']);
+  const pyArgs = ['demo'];
+  if (options.manifest) {
+    pyArgs.push('--manifest');
+  } else if (options.json) {
+    pyArgs.push('--json');
+  }
+
+  await setupAndRunPython(packageRoot, "fde_lab.cli.main", pyArgs, machineMode);
   
-  console.log(chalk.blue('────────────────────────────────'));
-  console.log('FDE Lab is ready.');
-  console.log('\nExample:');
-  console.log('"What services are running?"');
-  console.log('\nPress Ctrl+C to stop.');
+  if (!machineMode) {
+    console.log(chalk.blue('────────────────────────────────'));
+    console.log('FDE Lab is ready.');
+    console.log('\nExample:');
+    console.log('"What services are running?"');
+    console.log('\nPress Ctrl+C to stop.');
+  }
 }
 
 main().catch(err => {
-  console.error(chalk.red('\nFatal error: ' + err.message));
+  if (!program.opts().json && !program.opts().manifest) {
+    console.error(chalk.red('\nFatal error: ' + err.message));
+  } else {
+    console.error(`Fatal error: ${err.message}`);
+  }
   process.exit(1);
 });

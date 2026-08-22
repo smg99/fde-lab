@@ -1,0 +1,57 @@
+{
+  "customer": "Acme Commerce",
+  "issue": {
+    "title": "Escalation: Checkout occasionally fails when customers apply a...",
+    "classification": "PRODUCT_BUG",
+    "severity": "HIGH",
+    "reproducibility": "REPRODUCIBLE"
+  },
+  "summary": "Checkout occasionally fails when customers apply a discount code. We cannot consistently reproduce it, but customers are complaining about 500 errors on the checkout page.",
+  "facts": [
+    "Customer reported issue: Checkout occasionally fails when customers apply a discount code. We cannot consistently reproduce it, but customers are complaining about 500 errors on the checkout page.",
+    "Application error found: Failed to apply discount: TypeError: Cannot read properties of undefined (reading 'percentage')"
+  ],
+  "observations": [
+    "Found 1 sample requests correlating with the issue."
+  ],
+  "hypotheses": [
+    "Recent change 'Refactor discount calculation logic' might be related to the issue."
+  ],
+  "reproduction": {
+    "status": "REPRODUCIBLE",
+    "steps": [
+      "Send POST to POST /api/v1/checkout with payload: {\"cart_id\": \"cart_9921\", \"discount_code\": \"SAVE20\", \"payment_method\": \"credit_card\"}"
+    ],
+    "expected": "Checkout completes with HTTP 200.",
+    "observed": "Checkout fails with HTTP 500. Matches reported issue."
+  },
+  "evidence": [
+    {
+      "source": "Customer Report",
+      "observation": "Issue reported by customer",
+      "relevance": "Direct context",
+      "confidence": "HIGH"
+    },
+    {
+      "source": "Application Logs",
+      "observation": "Failed to apply discount: TypeError: Cannot read properties of undefined (reading 'percentage')",
+      "relevance": "Identifies failure point",
+      "confidence": "HIGH"
+    },
+    {
+      "source": "Request Samples",
+      "observation": "Found request req_8812a",
+      "relevance": "Identifies inputs",
+      "confidence": "HIGH"
+    },
+    {
+      "source": "Recent Changes",
+      "observation": "Updated the discount service to support fixed amount discounts. May have changed the payload structure for percentage discounts.",
+      "relevance": "Potential root cause",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "recommended_next_steps": [
+    "Engineering needs to fix the discount calculation logic for percentage discounts."
+  ]
+}

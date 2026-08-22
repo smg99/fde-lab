@@ -1,0 +1,11 @@
+{
+  "auth_token": "sk_test_12345",
+  "sample_request": {
+    "endpoint": "/customers",
+    "method": "POST",
+    "payload": {
+      "customer_email": "user@example.com",
+      "name": "Jane Doe"
+    }
+  }
+}

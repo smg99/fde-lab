@@ -1,0 +1,39 @@
+{
+  "name": "@fde-lab/api-integration-engineer",
+  "version": "0.1.0",
+  "description": "FDE Lab - API Integration Engineer POC",
+  "main": "dist/index.js",
+  "bin": {
+    "fde-api-integration-engineer": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && npm run copy-python",
+    "copy-python": "mkdir -p dist/python && cp -r ../../fde_lab ../../demo ../../pyproject.toml dist/python/ && find dist/python -name '__pycache__' -type d -exec rm -rf {} +"
+  },
+  "dependencies": {
+    "@fde-lab/cli-core": "0.1.5",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "author": "FDE Lab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smg99/fde-lab.git",
+    "directory": "packages/api-integration-engineer"
+  },
+  "homepage": "https://github.com/smg99/fde-lab/tree/main/packages/api-integration-engineer#readme",
+  "bugs": {
+    "url": "https://github.com/smg99/fde-lab/issues"
+  },
+  "keywords": [
+    "fde-lab",
+    "ai",
+    "worker",
+    "agent",
+    "api-integration-engineer"
+  ]
+}

@@ -52,7 +52,7 @@ export async function setupAndRunPython(projectDir: string, moduleName: string, 
     await runProcess;
 
   } catch (error: any) {
-    console.log(chalk.red(`\nFailed to setup or run python environment: ${error.message}`));
+    console.error(chalk.red(`\nFailed to setup or run python environment: ${error.message}`));
     process.exit(1);
   }
 }

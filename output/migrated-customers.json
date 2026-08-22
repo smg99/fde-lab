@@ -1,0 +1,28 @@
+[
+  {
+    "customer_id": "L-101",
+    "full_name": "Alice Smith",
+    "email_address": "alice@example.com",
+    "phone_number": "555-0101",
+    "organization_name": "Acme Corp",
+    "country_code": "US",
+    "account_status": "ACTIVE",
+    "subscription_tier": "PRO",
+    "marketing_consent": true,
+    "registered_at": "2022-11-20T00:00:00Z",
+    "address": "123 Main St, Anytown, CA, 12345"
+  },
+  {
+    "customer_id": "L-102",
+    "full_name": "Bob Jones",
+    "email_address": "bob@example.com",
+    "phone_number": "555-0102",
+    "organization_name": "Beta LLC",
+    "country_code": "UK",
+    "account_status": "CANCELLED",
+    "subscription_tier": "BASIC",
+    "marketing_consent": false,
+    "registered_at": "2021-05-15T00:00:00Z",
+    "address": "456 High St, London, W1 1AA"
+  }
+]

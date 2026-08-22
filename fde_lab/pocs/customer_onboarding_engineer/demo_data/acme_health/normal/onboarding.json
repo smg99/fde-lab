@@ -1,0 +1,21 @@
+{
+  "customer": {
+    "name": "Acme Health",
+    "contact": "admin@acmehealth.com"
+  },
+  "features": {
+    "analytics": true,
+    "exports": true,
+    "notifications": true
+  },
+  "integrations": {
+    "slack": {
+      "enabled": true,
+      "webhook_url": "https://example.com/webhook"
+    },
+    "webhook": {
+      "enabled": true,
+      "url": "https://api.acmehealth.com/webhook"
+    }
+  }
+}

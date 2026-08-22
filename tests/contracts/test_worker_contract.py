@@ -6,7 +6,14 @@ import sys
 POC_MODULES = {
     "fde_lab.pocs.incident_engineer.cli": "investigate",
     "fde_lab.pocs.integration_engineer.cli": "integrate",
-    "fde_lab.pocs.deployment_engineer.cli": "deploy"
+    "fde_lab.pocs.deployment_engineer.cli": "deploy",
+    "fde_lab.pocs.customer_onboarding_engineer.cli": "onboard",
+    "fde_lab.pocs.support_escalation_engineer.cli": "escalate",
+    "fde_lab.pocs.data_migration_engineer.cli": "migrate",
+    "fde_lab.pocs.api_integration_engineer.cli": "integrate-api",
+    "fde_lab.pocs.performance_engineer.cli": "investigate-performance",
+    "fde_lab.pocs.configuration_engineer.cli": "inspect-configuration",
+    "fde_lab.pocs.solution_engineer.cli": "design-solution"
 }
 
 @pytest.mark.parametrize("module, command", POC_MODULES.items())

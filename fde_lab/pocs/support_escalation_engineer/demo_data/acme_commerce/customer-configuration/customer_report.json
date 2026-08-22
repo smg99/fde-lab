@@ -1,0 +1,6 @@
+{
+  "customer": "Acme Commerce",
+  "contact": "support@acmecommerce.com",
+  "issue": "Checkout is failing for all users with a payment authorization error.",
+  "timestamp": "2023-10-25T14:30:00Z"
+}

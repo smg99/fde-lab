@@ -1,0 +1,12 @@
+[
+  {
+    "request_id": "req_8812a",
+    "endpoint": "POST /api/v1/checkout",
+    "payload": {
+      "cart_id": "cart_9921",
+      "discount_code": "SAVE20",
+      "payment_method": "credit_card"
+    },
+    "response_code": 500
+  }
+]

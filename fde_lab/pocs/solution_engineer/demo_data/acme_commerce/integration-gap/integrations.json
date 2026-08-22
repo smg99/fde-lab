@@ -1,0 +1,7 @@
+{
+  "systems": [
+    {"name": "Payment Provider", "type": "billing", "capabilities": ["one-time"]},
+    {"name": "CRM", "type": "customer_database", "capabilities": ["sync"]},
+    {"name": "Analytics", "type": "analytics", "capabilities": ["events"]}
+  ]
+}

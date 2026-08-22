@@ -1,0 +1,89 @@
+{
+  "status": "ready",
+  "scenario": "normal",
+  "requirements": [
+    "Introduce a new subscription checkout experience.",
+    "Must integrate with existing commerce platform.",
+    "Must use existing payment provider for billing.",
+    "Must sync subscribers to the customer CRM database.",
+    "Must record conversion events to the analytics system."
+  ],
+  "observations": [
+    "Existing infrastructure supports core routing."
+  ],
+  "constraints": [],
+  "gaps": [],
+  "conflicts": [],
+  "architecture": {
+    "components": [
+      "Web Application",
+      "Commerce API",
+      "Customer Database",
+      "Payment Provider"
+    ],
+    "connections": [
+      {
+        "source": "Web Application",
+        "target": "Commerce API",
+        "description": "Checkout requests"
+      },
+      {
+        "source": "Commerce API",
+        "target": "Payment Provider",
+        "description": "Process billing"
+      },
+      {
+        "source": "Commerce API",
+        "target": "Customer Database",
+        "description": "Sync subscribers"
+      }
+    ]
+  },
+  "implementation_plan": [
+    {
+      "name": "Phase 1 \u2014 Foundation",
+      "objective": "Define models and API contracts.",
+      "tasks": [
+        "define subscription domain model",
+        "extend commerce API"
+      ]
+    },
+    {
+      "name": "Phase 2 \u2014 Integration",
+      "objective": "Implement billing sync.",
+      "tasks": [
+        "implement billing synchronization",
+        "add webhook handling"
+      ]
+    },
+    {
+      "name": "Phase 3 \u2014 UI",
+      "objective": "Expose checkout.",
+      "tasks": [
+        "implement subscription checkout",
+        "expose billing status"
+      ]
+    },
+    {
+      "name": "Phase 4 \u2014 Validation",
+      "objective": "Testing and rollout.",
+      "tasks": [
+        "integration tests",
+        "customer acceptance testing"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "description": "Integration failure",
+      "severity": "MEDIUM",
+      "mitigation": "Add circuit breakers."
+    }
+  ],
+  "assumptions": [
+    "Commerce API is fully REST compliant."
+  ],
+  "customer_questions": [],
+  "confidence": "HIGH",
+  "requires_customer_input": false
+}

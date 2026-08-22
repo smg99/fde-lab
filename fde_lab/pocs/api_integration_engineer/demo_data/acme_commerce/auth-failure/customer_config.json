@@ -1,0 +1,11 @@
+{
+  "auth_token": "",
+  "sample_request": {
+    "endpoint": "/customers",
+    "method": "POST",
+    "payload": {
+      "email": "user@example.com",
+      "name": "Jane Doe"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "worker": {
+    "name": "customer-onboarding-engineer",
+    "version": "0.1.0"
+  },
+  "status": "failure",
+  "summary": "Execution failed",
+  "facts": [],
+  "actions": [],
+  "artifacts": [],
+  "warnings": [],
+  "errors": [
+    {
+      "code": "INTERNAL_ERROR",
+      "message": "Illegal trailing comma before end of object: line 14 column 51 (char 287)",
+      "stage": "execution",
+      "recoverable": false,
+      "suggested_action": "Check logs"
+    }
+  ],
+  "next_steps": []
+}

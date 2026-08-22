@@ -1,0 +1,9 @@
+[
+  {
+    "id": "CONFIG-CHANGE",
+    "title": "Rotated Stripe API keys",
+    "author": "customer-admin",
+    "timestamp": "2023-10-25T13:00:00Z",
+    "description": "Rotated API keys for Stripe integration in the admin panel."
+  }
+]

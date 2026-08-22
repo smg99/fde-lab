@@ -1,5 +1,7 @@
 import typer
 from rich.console import Console
+import json
+import sys
 
 console = Console()
 app = typer.Typer(help="FDE Lab CLI", no_args_is_help=True)
@@ -10,12 +12,46 @@ def callback():
     pass
 
 @app.command()
-def demo():
+def demo(
+    manifest: bool = typer.Option(False, "--manifest", help="Output worker manifest"),
+    json_output: bool = typer.Option(False, "--json", help="Output machine-readable JSON"),
+):
     """Run the initial FDE Lab demo."""
+    if manifest:
+        sys.stdout.write(json.dumps({
+            "schema_version": "0.1",
+            "name": "environment-inspector",
+            "version": "0.1.5",
+            "description": "Environment Inspector",
+            "capabilities": ["inspection"],
+            "inputs": [],
+            "outputs": []
+        }))
+        sys.stdout.flush()
+        return
+
+    if json_output:
+        sys.stdout.write(json.dumps({
+            "schema_version": "0.1",
+            "worker": {
+                "name": "environment-inspector",
+                "version": "0.1.5"
+            },
+            "status": "success",
+            "summary": "Environment inspected successfully",
+            "facts": [],
+            "actions": [],
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "next_steps": []
+        }))
+        sys.stdout.flush()
+        return
+
     console.print("\n[bold blue]FDE Lab[/bold blue]")
     console.print("────────────────────────────\n")
     
-    # Normally we'd check prereqs here
     console.print("[green]✓ Environment detected[/green]")
     console.print("[green]✓ Dependencies ready[/green]")
     console.print("[green]✓ Demo services started[/green]")
@@ -26,7 +62,6 @@ def demo():
     from fde_lab.tools.environment import GetServicesTool
     from fde_lab.observability.logger import configure_logging
     
-    # Configure logging for the runtime in a way that doesn't mess up our pretty console output
     configure_logging(level="WARNING")
     
     tools = [GetServicesTool()]

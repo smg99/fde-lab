@@ -1,0 +1,57 @@
+{
+  "authentication": {
+    "type": "bearer"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer <TOKEN>"
+  },
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/customers",
+      "request_mapping": {
+        "type": "object",
+        "required": [
+          "email",
+          "name"
+        ],
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "response_mapping": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/{id}",
+      "request_mapping": null,
+      "response_mapping": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

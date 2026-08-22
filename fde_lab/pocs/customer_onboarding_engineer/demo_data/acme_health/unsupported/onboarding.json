@@ -1,0 +1,17 @@
+{
+  "customer": {
+    "name": "Acme Health",
+    "contact": "admin@acmehealth.com"
+  },
+  "features": {
+    "analytics": true,
+    "exports": true,
+    "notifications": true
+  },
+  "integrations": {
+    "salesforce": {
+      "enabled": true,
+      "instance_url": "https://acmehealth.my.salesforce.com"
+    }
+  }
+}

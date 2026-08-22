@@ -1,0 +1,6 @@
+{
+  "customer": "Acme Commerce",
+  "contact": "support@acmecommerce.com",
+  "issue": "Checkout fails with a database error whenever someone completes a purchase.",
+  "timestamp": "2023-10-25T14:30:00Z"
+}

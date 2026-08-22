@@ -1,0 +1,112 @@
+[
+  {
+    "worker_id": "integration_engineer",
+    "npm_package": "@fde-lab/integration-engineer",
+    "version": "0.1.1",
+    "source_directory": "packages/integration-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/integration-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/integration-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/integration-engineer"
+  },
+  {
+    "worker_id": "deployment_engineer",
+    "npm_package": "@fde-lab/deployment-engineer",
+    "version": "0.1.1",
+    "source_directory": "packages/deployment-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/deployment-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/deployment-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/deployment-engineer"
+  },
+  {
+    "worker_id": "customer_onboarding_engineer",
+    "npm_package": "@fde-lab/customer-onboarding-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/customer-onboarding-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/customer-onboarding-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/customer-onboarding-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/customer-onboarding-engineer"
+  },
+  {
+    "worker_id": "data_migration_engineer",
+    "npm_package": "@fde-lab/data-migration-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/data-migration-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/data-migration-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/data-migration-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/data-migration-engineer"
+  },
+  {
+    "worker_id": "performance_engineer",
+    "npm_package": "@fde-lab/performance-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/performance-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/performance-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/performance-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/performance-engineer"
+  },
+  {
+    "worker_id": "environment_inspector",
+    "npm_package": "@fde-lab/environment-inspector",
+    "version": "0.1.5",
+    "source_directory": "packages/environment-inspector",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/environment-inspector",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/environment-inspector",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/environment-inspector"
+  },
+  {
+    "worker_id": "incident_engineer",
+    "npm_package": "@fde-lab/incident-engineer",
+    "version": "0.1.5",
+    "source_directory": "packages/incident-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/incident-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/incident-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/incident-engineer"
+  },
+  {
+    "worker_id": "api_integration_engineer",
+    "npm_package": "@fde-lab/api-integration-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/api-integration-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/api-integration-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/api-integration-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/api-integration-engineer"
+  },
+  {
+    "worker_id": "solution_engineer",
+    "npm_package": "@fde-lab/solution-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/solution-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/solution-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/solution-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/solution-engineer"
+  },
+  {
+    "worker_id": "support_escalation_engineer",
+    "npm_package": "@fde-lab/support-escalation-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/support-escalation-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/support-escalation-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/support-escalation-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/support-escalation-engineer"
+  },
+  {
+    "worker_id": "configuration_engineer",
+    "npm_package": "@fde-lab/configuration-engineer",
+    "version": "0.1.0",
+    "source_directory": "packages/configuration-engineer",
+    "github_url": "https://github.com/smg99/fde-lab/tree/main/packages/configuration-engineer",
+    "npm_url": "https://www.npmjs.com/package/@fde-lab/configuration-engineer",
+    "publication_status": "published",
+    "cli_command": "npx @fde-lab/configuration-engineer"
+  }
+]

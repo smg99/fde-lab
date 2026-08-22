@@ -1,0 +1,9 @@
+{
+  "service": "checkout-api",
+  "endpoint": "/checkout",
+  "request_rate_tps": 60,
+  "error_rate_percent": 0.1,
+  "cpu_utilization_percent": 45,
+  "memory_utilization_percent": 50,
+  "connection_pool_utilization_percent": 25
+}
