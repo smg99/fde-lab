@@ -26,6 +26,12 @@ To demonstrate how the system handles deployment failures safely and performs cl
 npx @fde-lab/deployment-engineer --scenario broken-app
 ```
 
+### AI-Native Mode
+
+This tool is AI-Native. Agents can interface with it programmatically using:
+- `--manifest`: Returns a JSON capability manifest.
+- `--json`: Runs the workflow and returns a standard JSON result envelope.
+
 ## Learn More
 
 Check out the <a href="https://github.com/smg99/fde-lab" target="_blank">FDE Lab GitHub Repository</a> for more information and to view the other FDE Lab solutions.

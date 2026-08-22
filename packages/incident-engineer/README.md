@@ -30,6 +30,12 @@ npx @fde-lab/incident-engineer --scenario inconclusive
 ```
 The agent will report that the root cause is **Inconclusive** with **Low** confidence, adhering to the FDE principle that uncertainty is mandatory when evidence is lacking.
 
+### AI-Native Mode
+
+This tool is AI-Native. Agents can interface with it programmatically using:
+- `--manifest`: Returns a JSON capability manifest.
+- `--json`: Runs the workflow and returns a standard JSON result envelope.
+
 ## Architecture
 
 This POC is strictly finite. It is not a monitoring platform or background worker. It evaluates the environment exactly once and cleanly exits when the report is rendered. 

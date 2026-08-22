@@ -36,6 +36,11 @@ Once started, the agent allows you to inspect the simulated local environment. T
 - "What services are currently running?"
 
 ## Architecture
+
+FDE Lab is **AI-Native**. Every worker exposes a predictable machine-readable JSON contract out of the box, ensuring that AI orchestration systems (or other agents) can discover and run these tools deterministically.
+
+For a deep dive on how agents interface with FDE Lab workers, read the [AI-Native Contract](docs/AI-NATIVE-CONTRACT.md).
+
 FDE Lab uses a thin Node.js/TypeScript CLI bootstrap layer to handle dependency validation and environment setup. The core agent runtime is built in lightweight, modular Python.
 
 ```text
