@@ -1,0 +1,16 @@
+{
+  "name": "@fde-lab/environment-inspector",
+  "version": "0.1.0",
+  "bin": {
+    "fde-environment-inspector": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && npm run copy-python",
+    "copy-python": "mkdir -p dist/python && cp -r ../../fde_lab ../../demo ../../pyproject.toml dist/python/"
+  },
+  "dependencies": {
+    "@fde-lab/cli-core": "0.1.0",
+    "chalk": "^4.1.2",
+    "execa": "^5.1.1"
+  }
+}

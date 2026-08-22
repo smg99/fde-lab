@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["fde_lab"]
+
+[project]
+name = "fde-lab"
+version = "0.1.0"
+description = "FDE Lab - Foundation for customer-facing AI engineering solutions"
+authors = [{name = "FDE", email = "fde@example.com"}]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12.3",
+    "pydantic>=2.8.2",
+    "structlog>=24.4.0",
+    "rich>=13.7.1",
+    "requests>=2.32.3",
+    "python-dotenv>=1.0.1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.2",
+    "pytest-cov>=5.0.0",
+    "black>=24.4.2",
+    "isort>=5.13.2",
+    "mypy>=1.11.1"
+]
+
+[project.scripts]
+fde = "fde_lab.cli.main:app"
+fde-incident = "fde_lab.pocs.incident_engineer.cli:app"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100

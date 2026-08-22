@@ -1,0 +1,13 @@
+{
+  "name": "@fde-lab/cli-core",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "execa": "^5.1.1"
+  }
+}
