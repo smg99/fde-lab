@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/performance-engineer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FDE Lab - Performance Engineer POC",
   "main": "dist/index.js",
   "bin": {
@@ -34,6 +34,15 @@
     "ai",
     "worker",
     "agent",
-    "performance-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "performance-engineer",
+    "performance",
+    "profiling",
+    "optimization",
+    "bottleneck",
+    "metrics",
+    "tracing",
+    "apm"
   ]
 }

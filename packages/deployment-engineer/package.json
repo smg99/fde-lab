@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/deployment-engineer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "files": [
     "dist"
   ],
@@ -38,6 +38,14 @@
     "ai",
     "worker",
     "agent",
-    "deployment-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "deployment-engineer",
+    "deployment",
+    "devops",
+    "ci-cd",
+    "infrastructure",
+    "automation",
+    "kubernetes"
   ]
 }

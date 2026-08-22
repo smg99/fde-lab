@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/data-migration-engineer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FDE Lab - Data Migration Engineer POC",
   "main": "dist/index.js",
   "bin": {
@@ -34,6 +34,13 @@
     "ai",
     "worker",
     "agent",
-    "data-migration-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "data-migration-engineer",
+    "data-migration",
+    "etl",
+    "data-engineering",
+    "database",
+    "schema"
   ]
 }

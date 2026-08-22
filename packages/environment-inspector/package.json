@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/environment-inspector",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "files": [
     "dist"
   ],
@@ -31,6 +31,14 @@
     "ai",
     "worker",
     "agent",
-    "environment-inspector"
+    "fde",
+    "forward-deployed-engineer",
+    "environment-inspector",
+    "environment",
+    "inspection",
+    "validation",
+    "configuration",
+    "audit",
+    "health-check"
   ]
 }

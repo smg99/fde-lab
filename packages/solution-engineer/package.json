@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/solution-engineer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FDE Lab - Solution Engineer POC",
   "main": "dist/index.js",
   "bin": {
@@ -34,6 +34,14 @@
     "ai",
     "worker",
     "agent",
-    "solution-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "solution-engineer",
+    "solution-engineering",
+    "pre-sales",
+    "architecture",
+    "design",
+    "requirements",
+    "system-design"
   ]
 }

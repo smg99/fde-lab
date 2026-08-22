@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/customer-onboarding-engineer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "files": [
     "dist"
   ],
@@ -30,6 +30,12 @@
     "ai",
     "worker",
     "agent",
-    "customer-onboarding-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "customer-onboarding-engineer",
+    "customer-success",
+    "onboarding",
+    "provisioning",
+    "tenant"
   ]
 }

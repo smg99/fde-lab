@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/support-escalation-engineer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FDE Lab - Support Escalation Engineer POC",
   "main": "dist/index.js",
   "bin": {
@@ -34,6 +34,14 @@
     "ai",
     "worker",
     "agent",
-    "support-escalation-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "support-escalation-engineer",
+    "support",
+    "escalation",
+    "tier-3",
+    "troubleshooting",
+    "debugging",
+    "customer-issue"
   ]
 }

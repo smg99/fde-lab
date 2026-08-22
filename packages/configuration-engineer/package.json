@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/configuration-engineer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FDE Lab - Configuration Engineer POC",
   "main": "dist/index.js",
   "bin": {
@@ -34,6 +34,14 @@
     "ai",
     "worker",
     "agent",
-    "configuration-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "configuration-engineer",
+    "configuration",
+    "validation",
+    "schema",
+    "settings",
+    "audit",
+    "compliance"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/integration-engineer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "files": [
     "dist"
   ],
@@ -38,6 +38,13 @@
     "ai",
     "worker",
     "agent",
-    "integration-engineer"
+    "fde",
+    "forward-deployed-engineer",
+    "integration-engineer",
+    "integration",
+    "data-integration",
+    "webhook",
+    "automation",
+    "etl"
   ]
 }
