@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/api-integration-engineer",
-  "version": "0.1.3",
+  "version": "0.1.8",
   "description": "FDE Lab - API Integration Engineer POC",
   "main": "dist/index.js",
   "bin": {
@@ -11,7 +11,7 @@
     "copy-python": "mkdir -p dist/python && cp -r ../../fde_lab ../../demo ../../pyproject.toml dist/python/ && find dist/python -name '__pycache__' -type d -exec rm -rf {} +"
   },
   "dependencies": {
-    "@fde-lab/cli-core": "^0.1.3",
+    "@fde-lab/cli-core": "^0.1.8",
     "chalk": "^4.1.2",
     "commander": "^11.1.0"
   },
