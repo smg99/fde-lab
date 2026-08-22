@@ -41,4 +41,4 @@ It is built utilizing the core FDE Lab architecture:
 
 ## Learn More
 
-Check out the [FDE Lab GitHub Repository](https://github.com/sumitg/fde-lab) for more information and to view the other FDE Lab solutions.
+Check out the [FDE Lab GitHub Repository](https://github.com/smg99/fde-lab) for more information and to view the other FDE Lab solutions.
