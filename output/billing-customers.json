@@ -1,0 +1,10 @@
+[
+  {
+    "external_customer_id": "C001",
+    "name": "John Smith",
+    "email_address": "john@example.com",
+    "organization": "Acme Inc",
+    "country_code": "US",
+    "subscription_tier": "PRO"
+  }
+]

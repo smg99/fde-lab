@@ -26,6 +26,7 @@ The CLI will:
 ## Available POCs
 
 - **Incident Engineer** (`@fde-lab/incident-engineer`): Investigates a simulated customer incident (Checkout API HTTP 500s) by correlating logs, metrics, git history, and deployments into a comprehensive incident report.
+- **Integration Engineer** (`@fde-lab/integration-engineer`): Inspects disparate CRM and Billing System schemas, constructs field mappings, validates data constraints, and safely transforms customer records without network mutation.
 - **Environment Inspector** (`@fde-lab/environment-inspector`): The foundational demo demonstrating simple environment inspection.
 
 ## Demo
@@ -82,7 +83,8 @@ Everything required for the default local demo must be open source and runnable 
 
 ## 10. Roadmap
 - [x] Foundation vertical slice (CLI, Runtime, Tool, Demo)
+- [x] Build POC 1: Incident Engineer
+- [x] Build POC 2: Integration Engineer
 - [ ] Connect local LLM (Ollama) to the Agent loop
 - [ ] Implement robust Tool schema validation (Pydantic)
-- [ ] Build POC 1: Incident Engineer
-- [ ] Build POC 2: Support Engineer
+- [ ] Build POC 3: Support Engineer
