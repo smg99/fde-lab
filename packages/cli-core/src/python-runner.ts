@@ -39,17 +39,16 @@ export async function setupAndRunPython(projectDir: string, moduleName: string, 
       console.log(chalk.blue('\nStarting FDE Lab...'));
     }
     
-    // 3. Run the python module interactively
     const runProcess = execa(pythonCmd, ['-m', moduleName, ...moduleArgs], { stdio: 'inherit' });
     
-    runProcess.catch((err: any) => {
-      // Ignore exit 0 or standard ctrl+c
-      if (err.exitCode !== 0) {
-        console.error(chalk.red(`\nPython process exited with error: ${err.message}`));
+    try {
+      await runProcess;
+    } catch (err: any) {
+      if (err.exitCode !== undefined && err.exitCode !== null) {
+        process.exit(err.exitCode);
       }
-    });
-
-    await runProcess;
+      throw err;
+    }
 
   } catch (error: any) {
     console.error(chalk.red(`\nFailed to setup or run python environment: ${error.message}`));

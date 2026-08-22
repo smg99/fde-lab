@@ -65,4 +65,61 @@ class WorkerManifest:
     examples: List[Example] = field(default_factory=list)
     
     def to_dict(self) -> dict:
-        return asdict(self)
+        d = asdict(self)
+        
+        d["exit_codes"] = {
+            "SUCCESS": 0,
+            "FAILURE": 1,
+            "INVALID_INPUT": 2,
+            "ENV_PROBLEM": 3,
+            "POLICY_REFUSAL": 4,
+            "INCONCLUSIVE": 5
+        }
+        
+        d["outputs"]["WorkerResult"] = {
+            "type": "object",
+            "description": "Standard FDE Lab result envelope",
+            "properties": {
+                "schema_version": {"type": "string"},
+                "worker": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "version": {"type": "string"}
+                    }
+                },
+                "status": {"type": "string", "description": "Worker execution status (e.g., success, inconclusive, failure)"},
+                "summary": {"type": "string"},
+                "facts": {"type": "array", "items": {"type": "string"}},
+                "actions": {"type": "array", "items": {"type": "string"}},
+                "artifacts": {
+                    "type": "array", 
+                    "items": {
+                        "type": "object", 
+                        "properties": {
+                            "path": {"type": "string"},
+                            "type": {"type": "string"},
+                            "description": {"type": "string"}
+                        }
+                    }
+                },
+                "warnings": {"type": "array", "items": {"type": "string"}},
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {"type": "string"},
+                            "message": {"type": "string"},
+                            "stage": {"type": "string"},
+                            "recoverable": {"type": "boolean"},
+                            "suggested_action": {"type": "string"}
+                        }
+                    }
+                },
+                "next_steps": {"type": "array", "items": {"type": "string"}}
+            },
+            "required": ["schema_version", "worker", "status", "summary", "facts", "actions", "artifacts", "warnings", "errors", "next_steps"]
+        }
+        
+        return d

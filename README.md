@@ -8,21 +8,29 @@ FDE Lab is a collection of 11 AI-native Forward Deployed Engineer (FDE) workers.
 npx @fde-lab/incident-engineer
 ```
 
-## AI-Native Interface
+## AI Consumption Contract
 
-Every worker supports standard AI-native execution modes for orchestrators.
+Every worker supports standard AI-native execution modes and a predictable contract designed specifically for external orchestrators.
 
-**Manifest Mode** (`--manifest`)
-```bash
-npx @fde-lab/incident-engineer --manifest
-```
-Outputs standard capabilities for AI discovery.
+1. **Discover worker:** Use `--manifest` to discover worker capabilities, input scenarios, and expected side-effects.
+   ```bash
+   npx @fde-lab/incident-engineer --manifest
+   ```
 
-**JSON Mode** (`--json`)
-```bash
-npx @fde-lab/incident-engineer --json
-```
-Outputs standardized execution results.
+2. **Understand invocation:** The manifest (`manifest.inputs` and `manifest.examples`) documents how to execute the worker.
+
+3. **Understand result:** The manifest (`manifest.outputs.WorkerResult`) provides a strict JSON Schema detailing exactly what data the worker will return.
+
+4. **Execute:** Invoke the worker via `npx`, passing required inputs.
+
+5. **Parse:** Use `--json` to retrieve the strictly-structured output. The stdout is guaranteed to contain only the clean JSON result envelope.
+   ```bash
+   npx @fde-lab/incident-engineer --json > result.json
+   ```
+
+6. **Interpret:** The JSON payload provides actionable context including `status`, `confidence`, `next_steps`, and `artifacts`.
+
+7. **Use process exit code:** The Node.js process propagates the granular Python semantic exit codes (e.g., `5` for Inconclusive, `0` for Success) as documented in `manifest.exit_codes`. This allows orchestrators to make immediate fallback or circuit-breaker decisions without parsing stdout.
 
 ## Workers
 
