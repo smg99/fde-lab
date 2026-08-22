@@ -1,6 +1,6 @@
 # FDE Lab
 
-FDE Lab is a collection of 10 AI-native Forward Deployed Engineer (FDE) workers. These workers handle various complex infrastructure and software tasks deterministically and output machine-readable JSON.
+FDE Lab is a collection of 11 AI-native Forward Deployed Engineer (FDE) workers. These workers handle various complex infrastructure and software tasks deterministically and output machine-readable JSON.
 
 ## Try it
 
@@ -22,18 +22,7 @@ Outputs standard capabilities for AI discovery.
 ```bash
 npx @fde-lab/incident-engineer --json
 ```
-Outputs standardized execution results:
-```json
-{
-  "success": true,
-  "worker": "incident-engineer",
-  "version": "0.1.5",
-  "status": "success",
-  "result": { ... },
-  "errors": [],
-  "warnings": []
-}
-```
+Outputs standardized execution results.
 
 ## Workers
 
@@ -50,7 +39,6 @@ Outputs standardized execution results:
 | 9 | `solution_engineer` | AI-native solution engineer | [`@fde-lab/solution-engineer`](https://www.npmjs.com/package/@fde-lab/solution-engineer) | ✅ Published |
 | 10 | `support_escalation_engineer` | AI-native support escalation engineer | [`@fde-lab/support-escalation-engineer`](https://www.npmjs.com/package/@fde-lab/support-escalation-engineer) | ✅ Published |
 | 11 | `configuration_engineer` | AI-native configuration engineer | [`@fde-lab/configuration-engineer`](https://www.npmjs.com/package/@fde-lab/configuration-engineer) | ✅ Published |
-
 
 ## Architecture
 
@@ -72,15 +60,6 @@ AI / Orchestrator
 - `fde_lab/`: Shared Python runtime and POC implementations
 - `registry/`: Capability and package registries
 - `docs/`: POC documentation
-
-## Development
-
-Use Make to manage the workspace:
-```bash
-make install
-make build
-make test
-```
 
 ## npm / GitHub
 
