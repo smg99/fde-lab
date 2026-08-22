@@ -32,18 +32,22 @@ pack-demo: js-build
 	@cd packages/environment-inspector && npm pack
 	@cd packages/incident-engineer && npm pack
 	@cd packages/integration-engineer && npm pack
+	@cd packages/deployment-engineer && npm pack
 	@rm -rf test-npx-env
 	@mkdir test-npx-env
 	@mv packages/cli-core/*.tgz test-npx-env/
 	@mv packages/environment-inspector/*.tgz test-npx-env/
 	@mv packages/incident-engineer/*.tgz test-npx-env/
 	@mv packages/integration-engineer/*.tgz test-npx-env/
+	@mv packages/deployment-engineer/*.tgz test-npx-env/
 	@echo "Local packages ready in test-npx-env/. To test locally:"
 	@echo "  npm install -g ./test-npx-env/fde-lab-cli-core-0.1.4.tgz"
 	@echo "  npm install -g ./test-npx-env/fde-lab-incident-engineer-0.1.4.tgz"
 	@echo "  npm install -g ./test-npx-env/fde-lab-integration-engineer-0.1.0.tgz"
+	@echo "  npm install -g ./test-npx-env/fde-lab-deployment-engineer-0.1.0.tgz"
 	@echo "  fde-incident-engineer"
 	@echo "  fde-integration-engineer"
+	@echo "  fde-deployment-engineer"
 	cd test-npx-env && npx fde-environment-inspector < /dev/null || true
 	cd test-npx-env && npx fde-incident-engineer < /dev/null || true
 	cd test-npx-env && npx fde-incident-engineer --scenario inconclusive < /dev/null || true

@@ -27,6 +27,7 @@ The CLI will:
 
 - **Incident Engineer** (`@fde-lab/incident-engineer`): Investigates a simulated customer incident (Checkout API HTTP 500s) by correlating logs, metrics, git history, and deployments into a comprehensive incident report.
 - **Integration Engineer** (`@fde-lab/integration-engineer`): Inspects disparate CRM and Billing System schemas, constructs field mappings, validates data constraints, and safely transforms customer records without network mutation.
+- **Deployment Engineer** (`@fde-lab/deployment-engineer`): Inspects an unfamiliar application, generates Docker configurations, and deterministically deploys and verifies it in a local container.
 - **Environment Inspector** (`@fde-lab/environment-inspector`): The foundational demo demonstrating simple environment inspection.
 
 ## Demo

@@ -1,0 +1,12 @@
+{
+  "application": "customer-demo-api",
+  "runtime": "python",
+  "runtime_version": "3.11",
+  "container": {
+    "technology": "docker",
+    "image": "fde-lab/customer-app"
+  },
+  "port": 8000,
+  "health_endpoint": "/health",
+  "entrypoint": "app/application.py"
+}
