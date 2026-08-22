@@ -12,7 +12,7 @@
     "copy-python": "mkdir -p dist/python && cp -r ../../fde_lab ../../demo ../../pyproject.toml dist/python/"
   },
   "dependencies": {
-    "@fde-lab/cli-core": "0.1.0",
+    "@fde-lab/cli-core": "0.1.4",
     "chalk": "^4.1.2",
     "commander": "^11.0.0"
   }

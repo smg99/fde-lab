@@ -2,19 +2,23 @@ import logging
 import sys
 import structlog
 
-def configure_logging(level: str = "INFO", json_format: bool = False):
+def configure_logging(level: str = "INFO", machine_mode: bool = False):
     """Configure structured logging for the application."""
     
     # Set the standard logging level
     numeric_level = getattr(logging, level.upper(), logging.INFO)
+    
+    # In machine mode, all logs MUST go to stderr to prevent polluting stdout JSON
+    stream = sys.stderr if machine_mode else sys.stdout
+    
     logging.basicConfig(
         format="%(message)s",
-        stream=sys.stdout,
+        stream=stream,
         level=numeric_level,
     )
     
     # Choose the renderer
-    if json_format:
+    if machine_mode:
         renderer = structlog.processors.JSONRenderer()
     else:
         renderer = structlog.dev.ConsoleRenderer(colors=True)

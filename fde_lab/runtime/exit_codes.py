@@ -1,0 +1,7 @@
+class ExitCode:
+    SUCCESS = 0
+    FAILURE = 1
+    INVALID_INPUT = 2
+    ENV_PROBLEM = 3
+    POLICY_REFUSAL = 4
+    INCONCLUSIVE = 5

@@ -4,8 +4,8 @@ import path from 'path';
 import fs from 'fs';
 import os from 'os';
 
-export async function setupAndRunPython(projectDir: string, moduleName: string, moduleArgs: string[] = []): Promise<void> {
-  console.log(chalk.blue('\nPreparing environment...'));
+export async function setupAndRunPython(projectDir: string, moduleName: string, moduleArgs: string[] = [], quiet: boolean = false): Promise<void> {
+  if (!quiet) console.log(chalk.blue('\nPreparing environment...'));
   
   const cacheDir = path.join(os.homedir(), '.fde-lab-cache', path.basename(projectDir));
   if (!fs.existsSync(cacheDir)) {
@@ -32,10 +32,12 @@ export async function setupAndRunPython(projectDir: string, moduleName: string, 
     }
 
     await execa(pipCmd, ['install', '-e', bundledPythonDir], { stdio: 'ignore' });
-    console.log(chalk.green('✓ Runtime ready'));
-    console.log(chalk.green('✓ Demo data ready')); // Simulated for now
-    
-    console.log(chalk.blue('\nStarting FDE Lab...'));
+    if (!quiet) {
+      console.log(chalk.green('✓ Runtime ready'));
+      console.log(chalk.green('✓ Demo data ready')); // Simulated for now
+      
+      console.log(chalk.blue('\nStarting FDE Lab...'));
+    }
     
     // 3. Run the python module interactively
     const runProcess = execa(pythonCmd, ['-m', moduleName, ...moduleArgs], { stdio: 'inherit' });
