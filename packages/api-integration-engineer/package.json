@@ -1,6 +1,6 @@
 {
   "name": "@fde-lab/api-integration-engineer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "FDE Lab - API Integration Engineer POC",
   "main": "dist/index.js",
   "bin": {
