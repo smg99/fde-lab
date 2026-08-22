@@ -17,4 +17,4 @@ A developer or potential customer should be able to clone or install a project a
 
 ## Learn More
 
-Check out the [FDE Lab GitHub Repository](https://github.com/smg99/fde-lab) for more information.
+Check out the <a href="https://github.com/smg99/fde-lab" target="_blank">FDE Lab GitHub Repository</a> for more information.

@@ -31,4 +31,4 @@ When executed, the FDE Lab CLI will:
 
 ## Learn More
 
-Check out the [FDE Lab GitHub Repository](https://github.com/smg99/fde-lab) for more information and to view the other FDE Lab solutions.
+Check out the <a href="https://github.com/smg99/fde-lab" target="_blank">FDE Lab GitHub Repository</a> for more information and to view the other FDE Lab solutions.
