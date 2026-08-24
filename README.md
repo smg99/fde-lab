@@ -74,3 +74,9 @@ AI / Orchestrator
 The npm packages wrap the Python workers for easy distribution. The packages contain pre-bundled Python environments that install transparently into a local cache directory on first run.
 
 Source: [https://github.com/smg99/fde-lab](https://github.com/smg99/fde-lab)
+
+---
+
+## ☕ Support the work
+
+If this project saved you time or you found it useful, consider [buying me a coffee](https://buymeacoffee.com/smg99). It helps me keep building and open-sourcing useful tools.
