@@ -16,7 +16,7 @@ Building AI-powered developer tools that help engineering teams write better sof
 
 ---
 
-# 👋 Hi, I'm Sumit Gajjar
+# 👋 Hi, I'm Sumit G
 
 I'm a **Software Architect** with **14+ years** of experience building enterprise SaaS applications, developer platforms, and modern frontend architectures.
 
